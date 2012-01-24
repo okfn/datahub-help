@@ -1,0 +1,9 @@
+# master
+build
+# gh-pages sphinx built stuff
+.doctrees
+doctrees
+_sources
+.buildinfo
+# used for intersphinx etc (do not need to deploy)
+objects.inv
