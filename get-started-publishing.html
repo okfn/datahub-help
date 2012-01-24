@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started with the DataHub: Publishing a Dataset &mdash; DataHub Help 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DataHub Help 1.0 documentation" href="index.html" />
+    <link rel="prev" title="DataHub Help" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="DataHub Help"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DataHub Help 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started-with-the-datahub-publishing-a-dataset">
+<h1>Getting Started with the DataHub: Publishing a Dataset<a class="headerlink" href="#getting-started-with-the-datahub-publishing-a-dataset" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial will introduce you to the DataHub via the process of publishing a
+Dataset using the <a class="reference external" href="http://thedatahub.org/">DataHub</a> and either Google Docs or the DataHub Webstore.</p>
+<p>Along the way you may get to do a bit of data wrangling (finding, cleaning and
+fixing up data).</p>
+<div class="section" id="step-0-identify-a-dataset-to-use">
+<h2>Step 0 - Identify a Dataset to Use<a class="headerlink" href="#step-0-identify-a-dataset-to-use" title="Permalink to this headline">¶</a></h2>
+<p>For this purposes of this tutorial you will want to have some raw data which
+you want to put up on the DataHub. If you don&#8217;t have one to hand we suggest you
+just use some of the raw data from this <a class="reference external" href="http://thedatahub.org/dataset/gold-prices">Gold Prices Dataset</a> on the DataHub
+(just pretend you dug it up somewhere on the Internet!).</p>
+</div>
+<div class="section" id="step-1-boot-a-datahub-dataset">
+<h2>Step 1 - Boot a DataHub Dataset<a class="headerlink" href="#step-1-boot-a-datahub-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Create a Dataset on the <a class="reference external" href="http://thedatahub.org/">DataHub</a>. Do not worry if you have not, yet, got the
+raw data &#8211; it is still a good idea to create the dataset entry now. Creating a
+dataset at this point is doing 2 things:</p>
+<ul class="simple">
+<li>Creating a nice permanent online address (the dataset URL) which you and
+others can come back to.</li>
+<li>Creating a project workspace for your data wrangling endeavours where you can
+record notes and links as you go along.</li>
+</ul>
+<p>In addition to a title, add a short description to your dataset, and any other
+relevant links, tags etca. If you don&#8217;t have the data yet, add a tag of the
+form <cite>todo.getdata</cite>.</p>
+<p>You may also want to boot a document (such as <a class="reference internal" href="glossary.html#term-etherpad"><em class="xref std std-term">etherpad</em></a>, or text file)
+which will serve as your scratchpad and <em class="xref std std-term">README</em> where you can record
+notes, links etc as you go along &#8211; a bit like your data wrangler lab notebook.
+You will then periodically dump this &#8211; or a cleaned up version &#8211; into the
+your dataset notes on the datahub.</p>
+<p>NB: you can just use the notes section of your DataHub dataset all along and
+forget having a separate local document &#8211; however a) you may be working
+offline b) many people like using their favourite text editor!</p>
+</div>
+<div class="section" id="step-2-get-the-data">
+<h2>Step 2 - Get the Data<a class="headerlink" href="#step-2-get-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Start digging for the data. This isn&#8217;t our subject here so we leave the details
+to you. What we do suggest is you upload or links to data you find in your
+DataHub dataset (even if it&#8217;s just PDF!).</p>
+</div>
+<div class="section" id="step-3-wrangle-the-data">
+<h2>Step 3 - Wrangle the Data<a class="headerlink" href="#step-3-wrangle-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Now you&#8217;ve found raw data it&#8217;s time to get it in stanard machine readable form.
+We&#8217;re going to focus on a tabular, spreadsheet style setup here though this may
+not always be appropriate for your data (for example, it may be good for
+geodata).</p>
+<p>We suggest two approaches:</p>
+<ul class="simple">
+<li>Use google docs spreadsheets</li>
+<li>Use your favourite spreadsheet application</li>
+<li>Use command line tools</li>
+</ul>
+<p>The result of this process should be a spreadsheet representing our &#8216;refined&#8217; data.</p>
+</div>
+<div class="section" id="step-4-add-refined-data-to-your-dataset">
+<h2>Step 4 - Add refined data to your dataset<a class="headerlink" href="#step-4-add-refined-data-to-your-dataset" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a <a class="reference internal" href="glossary.html#term-csv"><em class="xref std std-term">CSV</em></a> file (this is much preferred as a format to e.g. a excel file)</li>
+<li>Either the data to the DataHub.<ul>
+<li>Either: (Best) Upload it to the Webstore (see next item) and then add
+Resource entry in the Resources section of your DataHub dataset linking to
+your Webstore file</li>
+<li>Just upload the file directly to the DataHub - go to Resources in edit
+section and then choose &#8216;Upload a File&#8217;</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If using google doc the simplest option is just to create a Resource in your
+DataHub dataset linking to the google doc. (NB: if you do this, ensure that you
+have made your google doc publicly accessible and that you have <em>also</em>
+published it to the web &#8211; see file menu -&gt; publish to the web).</p>
+</div>
+<div class="section" id="upload-to-the-webstore">
+<h3>Upload to the Webstore<a class="headerlink" href="#upload-to-the-webstore" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way to do this at present is to use the command line tool
+<a class="reference internal" href="glossary.html#term-curl"><em class="xref std std-term">curl</em></a>. You will also need your DataHub API key (see your account page).</p>
+<p>Peform the following on the command line:</p>
+<div class="highlight-python"><pre>curl --data-binary @myfile.csv -H "Authorization: {datahub-api-key}" -i -H "Content-type: text/csv" -X PUT http://webstore.thedatahub.org/{user-name}/{db-name}/{table-name}</pre>
+</div>
+<p>Values in &#8216;{...}&#8217; should be replaced with a value your choose.</p>
+<blockquote>
+<div><ul class="simple">
+<li>{table-name}: suggest using <cite>data</cite> as a standard default</li>
+<li>{db-name}: suggest using the same name as your DataHub dataset</li>
+</ul>
+</div></blockquote>
+<p>If you want to delete the table in order to re upload it do:</p>
+<div class="highlight-python"><pre>curl -H "Authorization: {datahub-api-key}" -i -X DELETE http://webstore.thedatahub.org/{user-name}/{db-name}/{table-name}</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started with the DataHub: Publishing a Dataset</a><ul>
+<li><a class="reference internal" href="#step-0-identify-a-dataset-to-use">Step 0 - Identify a Dataset to Use</a></li>
+<li><a class="reference internal" href="#step-1-boot-a-datahub-dataset">Step 1 - Boot a DataHub Dataset</a></li>
+<li><a class="reference internal" href="#step-2-get-the-data">Step 2 - Get the Data</a></li>
+<li><a class="reference internal" href="#step-3-wrangle-the-data">Step 3 - Wrangle the Data</a></li>
+<li><a class="reference internal" href="#step-4-add-refined-data-to-your-dataset">Step 4 - Add refined data to your dataset</a><ul>
+<li><a class="reference internal" href="#upload-to-the-webstore">Upload to the Webstore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">DataHub Help</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/get-started-publishing.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="DataHub Help"
+             >previous</a> |</li>
+        <li><a href="index.html">DataHub Help 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Open Knowledge Foundation.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>
