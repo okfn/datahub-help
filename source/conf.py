@@ -96,7 +96,10 @@ html_theme = 'sphinx-theme-okfn'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    'git_repo': 'https://github.com/okfn/datahub-help',
+    'logo_icon': 'http://assets.okfn.org/p/ckan/img/ckan_logo_box.png'
+    }
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['_themes']
