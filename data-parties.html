@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Search &mdash; DataHub Help 1.0 documentation</title>
+    <title>Data Parties &mdash; DataHub Help 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,13 +26,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <script type="text/javascript" src="_static/bootstrap-dropdown.js"></script>
     <link rel="top" title="DataHub Help 1.0 documentation" href="index.html" />
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
+    <link rel="prev" title="Getting Started with the DataHub: Publishing a Dataset" href="get-started-publishing.html" />
 <script type="text/javascript">
 (function () {
   /**
@@ -88,7 +84,6 @@
 }());
 </script>
 
-
   </head>
   <body>
   
@@ -108,22 +103,34 @@
             <li class="dropdown" data-dropdown="dropdown">
   <a href="index.html"
      class="dropdown-toggle">Table of Contents</a>
-  <span class="globaltoc"><ul>
+  <span class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get-started-publishing.html">Getting Started with the DataHub: Publishing a Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-parties.html">Data Parties</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Data Parties</a></li>
 </ul>
 </span>
 </li>
             <li class="dropdown" data-dropdown="dropdown">
   <a href="#"
      class="dropdown-toggle">This Page</a>
-  <span class="localtoc"></span>
+  <span class="localtoc"><ul>
+<li><a class="reference internal" href="#">Data Parties</a><ul>
+<li><a class="reference internal" href="#register-and-curate-datasets">1. Register and curate datasets</a></li>
+<li><a class="reference internal" href="#clean-up-or-extract-data-to-create-a-new-dataset">2. Clean up or extract data to create a new Dataset</a></li>
+</ul>
+</li>
+</ul>
+</span>
 </li>
           
         </ul>
         <ul class="nav secondary-nav">
           
             
+<form class="pull-left" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
           
         </ul>
       </div>
@@ -134,29 +141,38 @@
 <div class="container">
   <div class="content">
    
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
-  </p>
-  <form action="" method="get">
-    <input type="text" name="q" value="" />
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  <div id="search-results">
-  
-  </div>
+  <div class="section" id="data-parties">
+<h1>Data Parties<a class="headerlink" href="#data-parties" title="Permalink to this headline">¶</a></h1>
+<p>During a data party there are a variety of activities you can get involved in:</p>
+<ol class="arabic simple">
+<li>Register and curate existing datasets</li>
+<li>Create new datasets</li>
+</ol>
+<div class="section" id="register-and-curate-datasets">
+<h2>1. Register and curate datasets<a class="headerlink" href="#register-and-curate-datasets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add information on the DataHub with links to source data.</li>
+<li>Enhance existing dataset information (better description, details of license, add data links). See page describing the types of licenses in case of doubt.<ul>
+<li>If you are looking for things to do look for todo items: <a class="reference external" href="http://thedatahub.org/dataset?q=tags%3Atodo*">http://thedatahub.org/dataset?q=tags%3Atodo*</a></li>
+<li>Conventions:<ul>
+<li>Country: use tag country.{2-digit-code} e.g. country.uk country.us country.fr etc</li>
+<li>Temporal coverage: see <a class="reference external" href="http://wiki.ckan.org/MicroSchemas">http://wiki.ckan.org/MicroSchemas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Make an enquiry about openness of data.If license or openness is unclear you can make an enquiry using: <a class="reference external" href="http://isitopendata.org/">http://isitopendata.org/</a><ul>
+<li>Be sure to add a note about having done this to the notes of the related Dataset</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="clean-up-or-extract-data-to-create-a-new-dataset">
+<h2>2. Clean up or extract data to create a new Dataset<a class="headerlink" href="#clean-up-or-extract-data-to-create-a-new-dataset" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="get-started-publishing.html"><em>Getting Started with the DataHub: Publishing a Dataset</em></a>.</p>
+</div>
+</div>
+
 
  </div>
 </div>

@@ -14,11 +14,19 @@ div.documentwrapper {
   width: 100%;
 }
 
-{%- block sidebarlogo %}
-  {%- if logo %}
-.topbar h3 a, .topbar .brand {
-  background: transparent url("{{ logo }}") no-repeat 22px 3px;
-  padding-left: 62px;
+.topbar .logo-icon img {
+  float: left;
+  height: 25px;
+  padding: 5px 5px 0 0;
 }
-  {%- endif %}
-{%- endblock %}
+
+.content {
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+}
+
+.content > section h1 {
+  padding: 20px 20px 10px;
+  margin: -20px -20px 20px;
+}
+
