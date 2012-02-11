@@ -1,5 +1,6 @@
 # master
 build
+sandbox
 # gh-pages sphinx built stuff
 .doctrees
 doctrees
