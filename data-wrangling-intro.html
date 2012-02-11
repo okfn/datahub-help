@@ -1,0 +1,222 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>An Introduction to Data Wrangling &mdash; DataHub Help 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-dropdown.js"></script>
+    <link rel="top" title="DataHub Help 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Data Parties" href="data-parties.html" />
+<script type="text/javascript">
+(function () {
+  /**
+   * Patch TOC list.
+   *
+   * Will mutate the underlying span to have a correct ul for nav.
+   *
+   * @param $span: Span containing nested UL's to mutate.
+   * @param minLevel: Starting level for nested lists. (1: global, 2: local).
+   */
+  var patchToc = function ($span, minLevel) {
+    var $tocList = $("<ul/>").attr('class', "dropdown-menu"),
+      findA;
+
+    // Find all a "internal" tags, traversing recursively.
+    findA = function ($elem, level) {
+      var level = level || 0,
+        $items = $elem.find("> li > a.internal, > ul, > li > ul");
+
+      // Iterate everything in order.
+      $items.each(function (index, item) {
+        var $item = $(item),
+          tag = item.tagName.toLowerCase(),
+          pad = 10 + ((level - minLevel) * 10);
+
+        if (tag === 'a' && level >= minLevel) {
+          // Add to existing padding.
+          $item.css('padding-left', pad + "px");
+          // Add list element.
+          $tocList.append($("<li/>").append($item));
+        } else if (tag === 'ul') {
+          // Recurse.
+          findA($item, level + 1);
+        }
+      });
+    };
+
+    // Start construction and return.
+    findA($span);
+
+    // Wipe out old list and patch in new one.
+    return $span.empty("ul").append($tocList);
+  };
+
+  $(document).ready(function () {
+    // Patch the global and local TOC's to be bootstrap-compliant.
+    patchToc($("span.globaltoc"), 1);
+    patchToc($("span.localtoc"), 2);
+
+    // Activate.
+    $('#topbar').dropdown();
+  });
+}());
+</script>
+
+  </head>
+  <body>
+  
+    <a href="https://github.com/okfn/datahub-help"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 50000;"
+    src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  
+  
+  <div class="topbar" data-scrollspy="scrollspy" >
+    <div class="topbar-inner">
+      <div class="container">
+        
+        <a class="logo-icon" href="index.html"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_box.png" alt="DataHub Help" /></a>
+        
+        <a class="brand" href="index.html">DataHub Help</a>
+        <ul class="nav">
+          
+            <li class="dropdown" data-dropdown="dropdown">
+  <a href="index.html"
+     class="dropdown-toggle">Table of Contents</a>
+  <span class="globaltoc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="get-started-publishing.html">Getting Started with the DataHub: Publishing a Dataset</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-parties.html">Data Parties</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">An Introduction to Data Wrangling</a></li>
+</ul>
+</span>
+</li>
+            <li class="dropdown" data-dropdown="dropdown">
+  <a href="#"
+     class="dropdown-toggle">This Page</a>
+  <span class="localtoc"><ul>
+<li><a class="reference internal" href="#">An Introduction to Data Wrangling</a><ul>
+<li><a class="reference internal" href="#task-1-finding-a-question">Task 1: Finding a Question</a></li>
+<li><a class="reference internal" href="#task-2-finding-data-to-answer-your-question">Task 2: Finding Data to Answer your Question</a></li>
+</ul>
+</li>
+</ul>
+</span>
+</li>
+          
+        </ul>
+        <ul class="nav secondary-nav">
+          
+            
+<form class="pull-left" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="content">
+   
+  <div class="section" id="an-introduction-to-data-wrangling">
+<h1>An Introduction to Data Wrangling<a class="headerlink" href="#an-introduction-to-data-wrangling" title="Permalink to this headline">¶</a></h1>
+<p>A introduction to data wrangling covers obtaining, cleaning and using data.
+It&#8217;s organized as a series of simple tasks that you work through.</p>
+<div class="section" id="task-1-finding-a-question">
+<h2>Task 1: Finding a Question<a class="headerlink" href="#task-1-finding-a-question" title="Permalink to this headline">¶</a></h2>
+<p>Data isn&#8217;t an end in itself. We usually want data to help us answer some
+question or help us do some activity.</p>
+<p>So your first task will be to think of some question that you&#8217;d like to answer
+that could be answered by getting hold of some data.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>How many people are without clean drinking water in the world this year?</li>
+<li>How much did my country spend on defence last year?</li>
+<li>What is a normal weight for someone my age?</li>
+</ul>
+<p>You can find more questions, and requests for specific datasets, on <a class="reference external" href="http://getthedata.org/">http://getthedata.org/</a></p>
+<p>For the purposes of exposition, during the rest of this course  we are going to
+focus on a specific example question shown below. Of course, you should focus
+on your own question.</p>
+<p><strong>Our question: How much financial support did the US government give to banks
+and other companies during the financial crisis of 2008-2009?</strong></p>
+</div>
+<div class="section" id="task-2-finding-data-to-answer-your-question">
+<h2>Task 2: Finding Data to Answer your Question<a class="headerlink" href="#task-2-finding-data-to-answer-your-question" title="Permalink to this headline">¶</a></h2>
+<p>Now&#8217;s it time to go and find data to answer your question.</p>
+<p>We&#8217;ll focus on our own example question but you can use the same techniques for
+your own question.</p>
+<p><strong>Our question: How much financial support did the US government give to banks
+and other companies during the financial crisis of 2008-2009?</strong></p>
+<p>In locating relevant data you have two options</p>
+<ul class="simple">
+<li>Use a standard web search engine like Google, Yahoo etc</li>
+<li>Go directly to a specific service that allows you to search data relevant to
+your topic. For example if you know what you are looking for is likely to be
+in government statistics you can go directly to your official statistics
+agency site. Alternatively you can go to a dedicated data hub like
+<a class="reference external" href="http://thedatahub.org/">http://thedatahub.org/</a>.  We usually recommend option 1 because a search on a
+generic engine will usually find datasets in more specific systems.</li>
+</ul>
+<p>So in our case, we&#8217;ll begin with a search on google:</p>
+<blockquote>
+<div>&#8220;US government bailout data&#8221;</div></blockquote>
+<p>Using google or another search engine to find data is something of an art but
+the general approach is to start with a basic search and follow links using
+those results either directly to find data or to refine your results.</p>
+<p>So in our case it becomes apparent that the US government have released
+official data. One link obtained is:</p>
+<p><a class="reference external" href="http://finacialstability.org">http://finacialstability.org</a></p>
+<p>Which as of June 2011 redirects to:</p>
+<p><a class="reference external" href="http://www.treasury.gov/initiatives/financial-stability">http://www.treasury.gov/initiatives/financial-stability</a></p>
+<p>On LHS sidebar there is a Investment Programs option which gives a list of
+investments. We have hit the motherlode. However, there are also some summary
+sites that seem to have consolidated versions of the data.  For example, via
+<a class="reference external" href="http://getthedata.org/questions/218/size-and-terms-of-us-government-support-for-insurer-aig">http://getthedata.org/questions/218/size-and-terms-of-us-government-support-for-insurer-aig</a>
+we have:</p>
+<p><a class="reference external" href="http://subsidyscope.org/bailout/tarp/">http://subsidyscope.org/bailout/tarp/</a></p>
+</div>
+</div>
+
+
+ </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>
+        &copy; Copyright 2012, Open Knowledge Foundation.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
