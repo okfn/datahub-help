@@ -1,6 +1,6 @@
-======================================================
-Getting Started with the DataHub: Publishing a Dataset
-======================================================
+===================================
+Publishing a Dataset on the DataHub
+===================================
 
 This tutorial will introduce you to the DataHub via the process of publishing a
 Dataset using the DataHub_ and either Google Docs or the DataHub Webstore.
@@ -13,9 +13,7 @@ fixing up data).
   We will assume below that the data can ultimately take a tabular like form
   but this is by no means required to use the DataHub_
 
-.. _Webstore: http://github.com/okfn/webstore
 .. _DataHub: http://thedatahub.org/
-.. _CKAN: http://ckan.org/
 
 Step 0 - Identify a Dataset to Use
 ==================================
@@ -86,7 +84,7 @@ Step 4 - Add refined data to your dataset
 
 1. Create a :term:`CSV` file (this is much preferred as a format to e.g. a excel file)
 
-2. Either the data to the DataHub.
+2. Add the data to the DataHub.
    
    * Either: (Best) Upload it to the Webstore (see next item) and then add
      Resource entry in the Resources section of your DataHub dataset linking to
