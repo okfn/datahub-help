@@ -92,17 +92,21 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'sphinx-theme-okfn'
+# Add any paths that contain custom themes here, relative to this directory.
+html_theme_path = ['_themes']
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'git_repo': 'https://github.com/okfn/datahub-help',
-    'logo_icon': 'http://assets.okfn.org/p/ckan/img/ckan_logo_box.png'
+    # 'git_repo': 'https://github.com/okfn/datahub-help',
+    'logo_icon': 'http://assets.okfn.org/p/opendatahandbook/img/data-wrench-inverted.png'
     }
 
-# Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['_themes']
+html_sidebars = {
+    '**':  ['globaltoc.html']
+}
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
